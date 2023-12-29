@@ -1,0 +1,54 @@
+.banner {
+  justify-content: space-between;
+  margin: 50px auto;
+  gap: 30px;
+}
+
+.banner-icons {
+  flex-direction: column;
+  gap: 30px;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 70px;
+  max-width: 562px;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+button {
+  margin-top: 40px;
+}
+
+.trailer {
+  position: relative;
+}
+
+.trailer p {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.trailer svg {
+  position: absolute;
+  top: 85px;
+  left: 110px;
+  background: rgba(0, 0, 0, 0.651);
+  border-radius: 50%;
+  padding: 20px;
+  z-index: 3;
+}
+
+.img-trailer, .gif-trailer {
+  width: 280px;
+  height: 158px;
+  position: absolute;
+  border-radius: 5px;
+  cursor: pointer;
+}
