@@ -1,0 +1,37 @@
+header {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 60px;
+}
+
+.header {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.596);
+}
+
+nav {
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav-primary {
+  list-style-type: none;
+  gap: 30px;
+}
+
+li {
+  font-size: 18px;
+}
+
+.nav-secondary {
+  flex-direction: row;
+}
+
+.nav-secondary .btn-secondary {
+  margin-right: 15px;
+}
+
+.btn-primary {
+  align-items: center;
+  gap: 5px;
+}
