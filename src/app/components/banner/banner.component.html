@@ -1,25 +1,26 @@
 <div class="container banner flex">
   <div class="flex banner-icons">
-    <img src="../../../assets/banner-hero/icons/game-1.png" alt="Icon Diablo IV">
-    <img src="../../../assets/banner-hero/icons/game-2.png" alt="Icon Heartstone">
-    <img src="../../../assets/banner-hero/icons/game-3.png" alt="Icon Warcraft">
-    <img src="../../../assets/banner-hero/icons/game-4.png" alt="Icon Diablo">
-    <img src="../../../assets/banner-hero/icons/game-5.png" alt="Icon StarCraft">
+    <img *ngFor="let game of games"
+         [src]="'../../../assets/banner-hero/icons/' + game.icon"
+         [alt]="game.name"
+         [class.active]="game === currentGame"
+         (click)="selectGame(game)">
+    <!-- Adicione a classe 'active' ao ícone do jogo atualmente selecionado -->
   </div>
 
   <div class="banner-description">
-    <h1>Retorna à escuridão com o game Diablo IV</h1>
-    <p>O retorno de Lilith traz uma era de escuridão e sofrimento</p>
-    <button class="btn-primary">Jogue agora</button>
+    <h1>{{ currentGame.title }}</h1>
+    <p>{{ currentGame.description }}</p>
+    <button class="btn-primary">{{ currentGame.button }}</button>
   </div>
 
   <div class="banner-trailer">
-    <img src="../../../assets/banner-hero/games/diablo-logo.png" alt="Icon Diablo IV">
+    <img class="logo-game" [src]="'../../../assets/banner-hero/games/' + currentGame.bigIcon" [alt]="currentGame.name">
     <div class="trailer">
-      <p>Assista o trailer</p>
+      <p (mouseenter)="startTrailer()" (mouseleave)="stopTrailer()">Assista o trailer</p>
       <svg xmlns="http://www.w3.org/2000/svg" (mouseenter)="startTrailer()" (mouseleave)="stopTrailer()" *ngIf="!isTrailerPlaying" width="25" height="25" viewBox="0 0 256 256"><path fill="#00aeff" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128"/></svg>
-      <img class="img-trailer" (mouseenter)="startTrailer()" (mouseleave)="stopTrailer()" src="../../../assets/banner-hero/games/diablo-animation-cover.png" alt="Icon Diablo IV">
-      <img class="gif-trailer" *ngIf="isTrailerPlaying" src="../../../assets/banner-hero/games/diablo-animation.gif" alt="Icon Diablo IV">
+      <img class="img-trailer" (mouseenter)="startTrailer()" (mouseleave)="stopTrailer()"  [src]="'../../../assets/banner-hero/games/' + currentGame.src" [alt]="currentGame.name">
+      <img class="gif-trailer" *ngIf="isTrailerPlaying" [src]="'../../../assets/banner-hero/games/' + currentGame.trailer" [alt]="currentGame.name">
     </div>
   </div>
 </div>

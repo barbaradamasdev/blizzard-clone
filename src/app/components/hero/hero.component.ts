@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { BannerComponent } from "../banner/banner.component";
+import { Game } from '../../models/Game.model';
 
 @Component({
     selector: 'app-hero',
@@ -10,5 +11,11 @@ import { BannerComponent } from "../banner/banner.component";
     imports: [HeaderComponent, BannerComponent]
 })
 export class HeroComponent {
+  currentGame?: Game;
+  backgroundStyle?: string;
 
+  updateBackground(game: Game): void {
+    this.currentGame = game;
+    this.backgroundStyle = `url('../../../assets/banner-hero/games/${this.currentGame.bgImage}')`;
+  }
 }

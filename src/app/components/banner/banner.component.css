@@ -9,9 +9,13 @@
   gap: 30px;
 }
 
+.banner-icons img {
+  cursor: pointer;
+}
+
 h1 {
-  font-size: 64px;
-  line-height: 70px;
+  font-size: clamp(30px, 5vw, 60px);
+  line-height: clamp(35px, 6vw, 70px);
   max-width: 562px;
 }
 
@@ -22,6 +26,10 @@ p {
 
 button {
   margin-top: 40px;
+}
+
+.logo-game {
+  width: 280px;
 }
 
 .trailer {
@@ -51,4 +59,13 @@ button {
   position: absolute;
   border-radius: 5px;
   cursor: pointer;
+  right: 0;
+}
+
+.banner-icons img {
+  filter: grayscale(100%);
+}
+
+.banner-icons img.active {
+  filter: grayscale(0%);
 }
