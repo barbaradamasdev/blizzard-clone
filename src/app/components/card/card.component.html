@@ -1,0 +1,18 @@
+<section class="cards grid">
+  <div class="card" *ngFor="let game of games">
+    <div class="img">
+      <img class="poster" src="../../../assets/cards/{{ game.poster }}.png" alt="">
+      <img class="logo" src="../../../assets/cards/{{ game.logo }}.png" alt="">
+    </div>
+    <h4>{{ game.title }}</h4>
+    <p>{{ game.type }}</p>
+  </div>
+
+  <div class="card last-card flex">
+    <img class="blizzard-logo" src="../../../assets/logo-blizzard.png" alt="">
+    <div class="flex see-more">
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="22" viewBox="0 0 512 512"><path fill="white" d="M186.2 139.6h139.6V0H186.2zM372.4 0v139.6H512V0zM0 139.6h139.6V0H0zm186.2 186.2h139.6V186.2H186.2zm186.2 0H512V186.2H372.4zM0 325.8h139.6V186.2H0zM186.2 512h139.6V372.4H186.2zm186.2 0H512V372.4H372.4zM0 512h139.6V372.4H0z"/></svg>
+      <p><span>Ver todos jogos</span></p>
+    </div>
+  </div>
+</section>

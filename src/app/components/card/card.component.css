@@ -1,0 +1,68 @@
+:root {
+  --blue-light: #00aeff;
+}
+
+.cards {
+  grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+  justify-content: space-between;
+}
+
+.card {
+  padding: 15px;
+  margin: auto;
+}
+
+.card:hover .poster {
+  box-shadow: 3px 3px 1px 1px var(--blue-light);
+  transform: scale(.95);
+}
+
+.card .poster, .card .poster::after {
+  transition: all 400ms ease-in-out;
+}
+
+.img {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 40px;
+  width: 70%;
+}
+
+.poster {
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+.see-more {
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+span {
+  font-size: 14px;
+}
+
+.last-card {
+  border: 1px solid rgba(255, 255, 255, 0.452);
+  border-radius: 6px;
+  padding: 15px;
+  margin: 15px auto;
+  height: 80%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.last-card .blizzard-logo {
+  object-fit: contain;
+  width: 130px;
+}
