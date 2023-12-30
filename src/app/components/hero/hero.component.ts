@@ -16,6 +16,6 @@ export class HeroComponent {
 
   updateBackground(game: Game): void {
     this.currentGame = game;
-    this.backgroundStyle = `url('../../../assets/banner-hero/games/${this.currentGame.bgImage}')`;
+    this.backgroundStyle = `url('../../../assets/banner-hero/games/${this.currentGame.bgImage}')  no-repeat top center / cover`;
   }
 }
