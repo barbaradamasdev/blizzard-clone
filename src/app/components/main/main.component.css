@@ -1,0 +1,31 @@
+:root {
+  --blue-light: #00aeff;
+}
+
+main > div {
+  gap: 40px;
+  justify-content: space-between;
+}
+
+h2 {
+  width: 80px;
+}
+
+.menu-icon > * {
+  width: 4px;
+  height: 4px;
+  background: var(--blue-light);
+  margin: 0 2px 2px 0;
+}
+
+.see-more {
+  width: 120px;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+span {
+  font-size: 12px;
+  color: var(--blue-light);
+}
