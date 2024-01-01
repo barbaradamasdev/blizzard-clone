@@ -45,6 +45,10 @@
   align-items: flex-end;
 }
 
+.see-more svg {
+  margin: 6px 0;
+}
+
 span {
   font-size: 14px;
 }
