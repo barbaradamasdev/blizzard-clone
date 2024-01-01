@@ -1,0 +1,59 @@
+footer {
+  background: url("../../../assets/footer-background.png") no-repeat center center / cover;
+}
+
+.container {
+  justify-content: space-between;
+  height: 800px;
+}
+
+.text-section {
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 500px;
+}
+
+.text-section li {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  color: grey;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.text-section img {
+  width: 133px;
+}
+
+.text-section button {
+  width: 230px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+button svg {
+  width: 20px;
+}
+
+.download-section {
+  gap: 15px;
+  align-items: center;
+}
+
+.app-section {
+  margin-right: -300px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.app-mini {
+  position: absolute;
+  left: 0;
+  right: -230px;
+  bottom: -100px;
+  margin: auto;
+}
