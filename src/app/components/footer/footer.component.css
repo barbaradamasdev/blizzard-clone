@@ -57,3 +57,23 @@ button svg {
   bottom: -100px;
   margin: auto;
 }
+
+@media screen and (max-width:768px) {
+  h2 {
+    width: 200px;
+  }
+
+  li {
+    width: 300px;
+  }
+
+  .app-section {
+    margin-left: -220px;
+    margin-right: 0;
+    transform: scale(.8);
+  }
+
+  .app-mini {
+    right: -170px;
+  }
+}
