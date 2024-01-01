@@ -49,3 +49,13 @@ span {
     display: none;
   }
 }
+
+@media screen and (max-width:400px) {
+  .icons {
+    display: none;
+  }
+
+  .see-more {
+    justify-content: flex-start;
+  }
+}

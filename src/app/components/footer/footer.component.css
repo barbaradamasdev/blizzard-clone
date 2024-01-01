@@ -77,3 +77,19 @@ button svg {
     right: -170px;
   }
 }
+
+@media screen and (max-width:440px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .app-section {
+    margin-top: -230px;
+    transform: scale(.5);
+  }
+
+  .app-mini {
+    right: 0;
+    left: 320px;
+  }
+}

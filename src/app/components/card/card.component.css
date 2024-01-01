@@ -90,6 +90,7 @@ span {
 
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    margin-left: -10px;
   }
 
   .card {
@@ -105,4 +106,6 @@ span {
     transform: scale(0.8);
     bottom: 20px;
   }
+
+
 }
