@@ -70,3 +70,39 @@ span {
   object-fit: contain;
   width: 130px;
 }
+
+@media screen and (max-width:768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width:415px) {
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  }
+
+  .card {
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  h4, p {
+    display: none;
+  }
+
+  .logo {
+    transform: scale(0.8);
+    bottom: 20px;
+  }
+}

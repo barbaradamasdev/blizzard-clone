@@ -14,6 +14,7 @@
 
 body {
   background: black;
+  overflow-x: hidden;
 }
 
 .container {
@@ -45,4 +46,12 @@ button {
 .btn-secondary {
   background: transparent;
   border: 2px solid white;
+}
+
+
+@media screen and (max-width:768px) {
+  .container {
+    padding: 30px;
+    width: 100vw;
+  }
 }
