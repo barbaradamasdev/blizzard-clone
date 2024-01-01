@@ -1,12 +1,15 @@
 header {
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   gap: 60px;
 }
 
 .header {
   border-bottom: 1px solid rgba(128, 128, 128, 0.596);
+}
+
+button {
+  width: 115px;
 }
 
 nav {
@@ -28,10 +31,11 @@ li {
 }
 
 .nav-secondary .btn-secondary {
-  margin-right: 15px;
+  margin-right: 16px;
 }
 
 .btn-primary {
   align-items: center;
   gap: 5px;
+  justify-content: center;
 }
