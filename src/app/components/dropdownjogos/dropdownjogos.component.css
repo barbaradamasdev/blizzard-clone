@@ -1,0 +1,70 @@
+:root {
+  --blue-light: #00aeff;
+}
+
+.dropdown {
+  position: relative;
+  background: linear-gradient(25deg, rgba(2, 2, 3, 1) 20%, rgba(14, 17, 23, 1) 55%);
+  width: 100vw;
+  height: 416px;
+}
+
+section {
+  position: relative;
+  top: 100;
+  left: 0;
+  right: 0;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 80px;
+  max-width: 1216px;
+  z-index: 30;
+}
+
+svg {
+  fill: var(--blue-light);
+  opacity: .6;
+}
+
+.sub-bar {
+  z-index: 23;
+  position: relative;
+  gap: 20px;
+  background: #15171B;
+  margin: auto;
+  justify-content: center;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sub-bar > * {
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+}
+
+.grid {
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+}
+
+.grid > * {
+  padding: 30px;
+  align-items: center;
+  flex-direction: column;
+  margin: 3px;
+  text-align: center;
+}
+
+.grid * img {
+  width: 70px;
+}
+
+.grid * p {
+  font-size: 14px;
+  color: rgb(160, 160, 160);
+}

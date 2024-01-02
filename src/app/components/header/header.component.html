@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" [ngClass]="{'black': isHeaderBlack}">
   <header class="container flex">
 
     <div class="logo">
@@ -7,8 +7,8 @@
 
     <nav class="flex">
       <ul class="nav-primary flex" [ngClass]="{'show': isDropdownVisible}">
-        <li class="dropdown">Jogos</li>
-        <li class="dropdown">Esportes</li>
+        <li class="dropdown" (click)="toggleDropdownSubmenu('jogos')">Jogos</li>
+        <li class="dropdown" (click)="toggleDropdownSubmenu('esportes')">Esportes</li>
         <li>Loja</li>
         <li>Notícias</li>
         <li>Suporte</li>
@@ -28,3 +28,6 @@
 
   </header>
 </div>
+<app-dropdown-jogos></app-dropdown-jogos>
+<app-dropdown-jogos *ngIf="isHeaderBlack && activeSubmenuId === 'jogos'"></app-dropdown-jogos>
+<app-dropdown-esportes *ngIf="isHeaderBlack && activeSubmenuId === 'esportes'"></app-dropdown-esportes>
