@@ -1,5 +1,5 @@
 <div class="header">
-<header class="container flex">
+  <header class="container flex">
 
     <div class="logo">
       <img src="../../../assets/logo-blizzard.png" alt="Logo da Blizzard">
@@ -22,10 +22,9 @@
         Logar</button>
     </div>
 
-    <div class="menu-dropdown" id="menuDropdown" (click)="toggleDropdown()" style="cursor: pointer;">
+    <div class="menu-dropdown" id="menuDropdown" (click)="toggleDropdown()" [ngClass]="{'show': isDropdownVisible}" style="cursor: pointer;">
       <img [src]="menuIconSrc" alt="Menu Icon">
     </div>
 
   </header>
 </div>
-<!-- <app-dropdown></app-dropdown> -->
