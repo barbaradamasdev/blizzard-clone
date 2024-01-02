@@ -71,13 +71,34 @@ li {
   color: red;
 }
 
+.menu-dropdown {
+  display: none;
+}
+
 
 /* Tablet 768px */
 
-@media screen and (min-width:670px) and (max-width:770px) {
+@media screen and (min-width:900px) and (max-width:1020px) {
+  li {
+    font-size: 1.5vw;
+  }
 
+  .nav-primary {
+    gap: 1.5vw;
+  }
+
+  .dropdown::after {
+    margin-left: 3px;
+    transform: rotate(270deg) scale(.5);
+  }
 }
 
-@media screen and (max-width:669px) {
+@media screen and (max-width:899px) {
+  .nav-primary {
+    display: none;
+  }
 
+  .menu-dropdown {
+    display: inherit;
+  }
 }
