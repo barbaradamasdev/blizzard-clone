@@ -1,6 +1,17 @@
 section {
   background: url("../../../assets/banner-hero/games/diablo-bg.png") no-repeat top center / cover;
   height: 650px;
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--after-width, 20%);
+  border-bottom: 2px solid var(--blue-light);
+  color: red;
 }
 
 @media screen and (max-width:669px) {

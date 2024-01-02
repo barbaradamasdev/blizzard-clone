@@ -1,4 +1,4 @@
 <section [style.background]="backgroundStyle">
   <app-header></app-header>
-  <app-banner (gameChanged)="updateBackground($event)"></app-banner>
+  <app-banner  (gameChanged)="updateBackground($event)" (gameIdChanged)="onGameIdChanged($event)"></app-banner>
 </section>
