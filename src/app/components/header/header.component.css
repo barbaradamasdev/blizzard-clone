@@ -1,11 +1,28 @@
+:root {
+  --blue-light: #00aeff;
+}
+
 header {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
+  z-index: 99;
 }
 
 .header {
   border-bottom: 1px solid rgba(128, 128, 128, 0.596);
+}
+
+.dropdown {
+  position: relative;
+  margin-right: 10px;
+}
+
+.dropdown::after{
+  content: url("../../../assets/arrow.svg");
+  position: absolute;
+  margin-left: 7px;
+  transform: rotate(270deg) scale(.8);
 }
 
 button {
@@ -23,7 +40,7 @@ nav {
 }
 
 li {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nav-secondary {
@@ -40,7 +57,27 @@ li {
   justify-content: center;
 }
 
+.logo {
+  position: relative;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  width: 43px;
+  border-bottom: 2px solid var(--blue-light);
+  color: red;
+}
+
+
 /* Tablet 768px */
-@media screen and (max-width: 768px) {
-  
+
+@media screen and (min-width:670px) and (max-width:770px) {
+
+}
+
+@media screen and (max-width:669px) {
+
 }

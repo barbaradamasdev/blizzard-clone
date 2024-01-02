@@ -44,6 +44,8 @@ span {
 }
 
 
+
+
 @media screen and (max-width:768px) {
   .subtitle, .wrapper {
     display: none;
