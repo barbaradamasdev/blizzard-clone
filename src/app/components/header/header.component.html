@@ -6,7 +6,7 @@
     </div>
 
     <nav class="flex">
-      <ul class="nav-primary flex">
+      <ul class="nav-primary flex" [ngClass]="{'show': isDropdownVisible}">
         <li class="dropdown">Jogos</li>
         <li class="dropdown">Esportes</li>
         <li>Loja</li>
@@ -15,15 +15,15 @@
       </ul>
     </nav>
 
-    <div class="nav-secondary flex">
+    <div class="nav-secondary flex" [ngClass]="{'show': isDropdownVisible}">
       <button class="btn-secondary">Criar conta</button>
       <button class="btn-primary flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="7" r="3"/></g></svg>
         Logar</button>
     </div>
 
-    <div class="menu-dropdown" id="menuDropdown">
-      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h18M3 12h18M3 19h18"/></svg>
+    <div class="menu-dropdown" id="menuDropdown" (click)="toggleDropdown()" style="cursor: pointer;">
+      <img [src]="menuIconSrc" alt="Menu Icon">
     </div>
 
   </header>
