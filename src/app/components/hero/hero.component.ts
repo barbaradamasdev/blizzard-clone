@@ -17,9 +17,6 @@ export class HeroComponent {
 
   onGameIdChanged(id: number): void {
     this.selectedGameId = id;
-    console.log(id)
-    console.log(this.selectedGameId)
-
 
     switch (id) {
       case 1:

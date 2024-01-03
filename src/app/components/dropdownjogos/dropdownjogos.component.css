@@ -2,11 +2,16 @@
   --blue-light: #00aeff;
 }
 
+svg {
+  fill: var(--blue-light);
+  opacity: .6;
+}
+
 .dropdown {
   position: relative;
   background: linear-gradient(25deg, rgba(2, 2, 3, 1) 20%, rgba(14, 17, 23, 1) 55%);
   width: 100vw;
-  height: 416px;
+  z-index: 30;
 }
 
 section {
@@ -19,32 +24,6 @@ section {
   justify-content: space-between;
   padding: 30px 80px;
   max-width: 1216px;
-  z-index: 30;
-}
-
-svg {
-  fill: var(--blue-light);
-  opacity: .6;
-}
-
-.sub-bar {
-  z-index: 23;
-  position: relative;
-  gap: 20px;
-  background: #15171B;
-  margin: auto;
-  justify-content: center;
-  height: 70px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.sub-bar > * {
-  gap: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  align-items: center;
 }
 
 .grid {
@@ -68,3 +47,60 @@ svg {
   font-size: 14px;
   color: rgb(160, 160, 160);
 }
+
+
+.sub-bar {
+  z-index: 23;
+  gap: 20px;
+  background: #15171B;
+  margin: auto;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sub-bar > * {
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+}
+
+@media screen and (max-width: 680px) {
+
+  .sub-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid > * {
+    padding: 15px 7px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .container {
+    padding: 0 30px 30px 20px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .dropdown {
+    margin: 0 -50px;
+    background: none;
+    padding: 0;
+  }
+
+  section {
+    padding: 0;
+    margin: 0;
+    margin-top: -30px;
+  }
+
+  .sub-bar {
+    margin-left: -50px;
+  }
+}
+
+

@@ -3,6 +3,10 @@
   "icons description logo"
   "icons description trailer"
   "icons description trailer";
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
 }
 
 .banner-icons {
@@ -71,7 +75,7 @@ button {
   background: rgba(0, 0, 0, 0.651);
   border-radius: 50%;
   padding: 15px;
-  z-index: 20;
+  z-index: 5;
   width: 51px;
   height: 51px;
 }
@@ -124,6 +128,8 @@ button {
     "description"
     "description"
     "icons";
+    position: inherit;
+
   }
 
   .banner-icons {

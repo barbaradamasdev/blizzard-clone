@@ -1,4 +1,5 @@
-<div class="header" [ngClass]="{'black': isHeaderBlack}">
+<div class="header">
+<!-- <div class="header" [ngClass]="{'black': isHeaderBlack}"> -->
   <header class="container flex">
 
     <div class="logo">
@@ -8,7 +9,9 @@
     <nav class="flex">
       <ul class="nav-primary flex" [ngClass]="{'show': isDropdownVisible}">
         <li class="dropdown" (click)="toggleDropdownSubmenu('jogos')">Jogos</li>
+        <!-- <app-dropdown-jogos *ngIf="activeSubmenuId === 'jogos'"></app-dropdown-jogos> -->
         <li class="dropdown" (click)="toggleDropdownSubmenu('esportes')">Esportes</li>
+        <!-- <app-dropdown-esportes *ngIf="activeSubmenuId === 'esportes'"></app-dropdown-esportes> -->
         <li>Loja</li>
         <li>Notícias</li>
         <li>Suporte</li>
@@ -22,12 +25,12 @@
         Logar</button>
     </div>
 
-    <div class="menu-dropdown" id="menuDropdown" (click)="toggleDropdown()" [ngClass]="{'show': isDropdownVisible}" style="cursor: pointer;">
+    <div class="menu-dropdown" id="menuDropdown" (click)="toggleDropdownMenu()" [ngClass]="{'show': isDropdownVisible}" style="cursor: pointer;">
       <img [src]="menuIconSrc" alt="Menu Icon">
     </div>
 
   </header>
 </div>
-<app-dropdown-jogos></app-dropdown-jogos>
-<app-dropdown-jogos *ngIf="isHeaderBlack && activeSubmenuId === 'jogos'"></app-dropdown-jogos>
-<app-dropdown-esportes *ngIf="isHeaderBlack && activeSubmenuId === 'esportes'"></app-dropdown-esportes>
+<!-- <app-dropdown-jogos></app-dropdown-jogos> -->
+<!-- <app-dropdown-jogos *ngIf="isHeaderBlack && activeSubmenuId === 'jogos'"></app-dropdown-jogos> -->
+<!-- <app-dropdown-esportes *ngIf="activeSubmenuId === 'esportes'"></app-dropdown-esportes> -->

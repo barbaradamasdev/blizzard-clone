@@ -5,11 +5,16 @@
 header {
   justify-content: space-between;
   align-items: center;
+  position: relative;
   gap: 60px;
   z-index: 99;
 }
 
-.header {
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  z-index: 990;
   border-bottom: 1px solid rgba(128, 128, 128, 0.596);
 }
 
@@ -18,11 +23,11 @@ header {
   margin-right: 10px;
 }
 
-.dropdown::after{
+.dropdown::after {
   content: url("../../../assets/arrow.svg");
   position: absolute;
   margin-left: 7px;
-  transform: rotate(270deg) scale(.8);
+  transform: rotate(270deg) scale(0.8);
 }
 
 button {
@@ -80,7 +85,9 @@ li {
   height: 40px;
 }
 
-.logo, .menu-dropdown, .nav-secondary {
+.logo,
+.menu-dropdown,
+.nav-secondary {
   z-index: 99;
 }
 
@@ -88,42 +95,49 @@ li {
   cursor: pointer;
 }
 
-.header.black{
-  background: linear-gradient(25deg, rgb(15, 15, 20) 20%, rgba(14,17,23,1) 55%);
-}
+/* .header.black {
+  background: linear-gradient(
+    25deg,
+    rgb(15, 15, 20) 20%,
+    rgba(14, 17, 23, 1) 55%
+  );
+} */
 
-@media screen and (max-width:1020px) {
-
-  .nav-primary, .nav-primary:after {
+@media screen and (max-width: 1020px) {
+  .nav-primary,
+  .nav-primary:after {
     transform: translateY(-1000px);
     opacity: 0;
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    transition: opacity 200ms ease-in, transform 200ms ease-in;
     position: absolute;
   }
 
   .nav-primary.show {
     opacity: 1;
     flex-direction: column;
-    top: 109px;
+    top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(25deg, rgba(2,2,3,1) 20%, rgba(14,17,23,1) 55%);
-    z-index: 1;
+    background: linear-gradient(
+      25deg,
+      rgba(2, 2, 3, 1) 20%,
+      rgba(14, 17, 23, 1) 55%
+    );
+    z-index: 15;
     transform: translateY(0);
-    margin: auto;
-    padding: 30px 8vw;
+    padding: 150px 90px 30px;
     max-width: 1400px;
-    width: 100vw;
+    margin: auto -50px;
   }
-
 
   .nav-primary.show .menu-dropdown {
     display: none;
   }
 
-  .menu-dropdown, .menu-dropdown::after {
+  .menu-dropdown,
+  .menu-dropdown::after {
     display: inherit;
-    transition: all 800ms ease-in-out;
+    transition: all 800ms ease-in;
   }
 
   .menu-dropdown.show img {
@@ -131,26 +145,25 @@ li {
   }
 }
 
-@media screen and (max-width:650px) {
-  .nav-secondary, .nav-secondary:after {
+@media screen and (max-width: 650px) {
+  .nav-secondary,
+  .nav-secondary:after {
     transform: translateY(-1000px);
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    transition: opacity 200ms ease-in, transform 200ms ease-in;
     position: absolute;
   }
 
   .nav-primary.show {
-    top: 108px;
-    padding: 30px 8vw 110px;
+    padding-top: 212px;
   }
 
   .nav-secondary.show {
-    top: 395px;
+    z-index: 16;
+    top: 130px;
     left: 0;
     right: 0;
-    z-index: 1;
     transform: translateY(0);
-    padding: 10px 30px 30px;
+    padding: 10px;
     justify-content: center;
   }
-
 }

@@ -17,14 +17,24 @@ export class HeaderComponent {
   activeSubmenuId: string | null = null;
 
 
-  toggleDropdown(): void {
-    this.isDropdownVisible = !this.isDropdownVisible;
-    this.isHeaderBlack = !this.isHeaderBlack;
+  toggleDropdownMenu(): void {
     this.menuIconSrc = this.isDropdownVisible ? '../../../assets/menu-open.svg' : '../../../assets/menu-burguer.svg';
+    this.isDropdownVisible = !this.isDropdownVisible;
+    //let check = this.isDropdownVisible ? this.toggleDropdownSubmenu : null;
   }
 
   toggleDropdownSubmenu(submenuId: string): void {
+    //this.isDropdownVisible = true;
     this.activeSubmenuId = submenuId;
     this.isHeaderBlack = !this.isHeaderBlack;
+
+    /* switch (this.activeSubmenuId) {
+      case 'jogos':
+        document.documentElement.style.setProperty('--margin-top-dropdown', '70px');
+        break;
+      case 'esportes':
+        document.documentElement.style.setProperty('--margin-top-dropdown', '90px');
+        break;
+    } */
   }
 }
