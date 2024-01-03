@@ -25,7 +25,6 @@ export class FooterComponent {
 
   updateOS(sistemaOperacional:string): void {
     this.iconOs = `../../../assets/os/${sistemaOperacional}.svg`;
-    console.log(this.iconOs)
     this.title = sistemaOperacional;
   }
 

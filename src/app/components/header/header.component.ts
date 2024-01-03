@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { DropdownJogosComponent } from "../dropdownjogos/dropdownjogos.component";
 import { DropdownesportesComponent } from "../dropdownesportes/dropdownesportes.component";
+import { LoginComponent } from "../login/login.component";
 
 @Component({
     selector: 'app-header',
     standalone: true,
     templateUrl: './header.component.html',
     styleUrl: './header.component.css',
-    imports: [CommonModule, DropdownJogosComponent, DropdownesportesComponent]
+    imports: [CommonModule, DropdownJogosComponent, DropdownesportesComponent, LoginComponent]
 })
 export class HeaderComponent {
   isDropdownVisible = false;
@@ -17,6 +18,7 @@ export class HeaderComponent {
   activeSubmenuId: string | null = null;
   dropdownTop = 50;
   isBigScreen = false;
+  isLoginOpen = false;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
@@ -34,6 +36,14 @@ export class HeaderComponent {
   toggleDropdownMenu(): void {
     this.menuIconSrc = this.isDropdownVisible ? '../../../assets/menu-burguer.svg' : '../../../assets/menu-open.svg';
     this.isDropdownVisible = !this.isDropdownVisible;
+  }
+
+  toggleLoginModal(): void {
+    this.isLoginOpen = !this.isLoginOpen;
+  }
+
+  closeLoginModal(): void {
+    this.isLoginOpen = false;
   }
 
   toggleDropdownSubmenu(submenuId: string): void {

@@ -1,0 +1,54 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 690px;
+  max-width: 90vw;
+  height: 600px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent),
+    url("../../../assets/bg-modal.png");
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 99;
+  border: 1px solid rgba(255, 255, 255, 0.466);
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+img {
+  width: 165px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+input,
+button {
+  width: 100%;
+  max-width: 426px;
+  height: 60px;
+}
+
+input {
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.login-buttons {
+  gap: 20px;
+}
+
+span {
+  color: var(--blue-light);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
