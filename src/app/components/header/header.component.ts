@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { DropdownJogosComponent } from "../dropdownjogos/dropdownjogos.component";
 import { DropdownesportesComponent } from "../dropdownesportes/dropdownesportes.component";
 
@@ -12,29 +12,44 @@ import { DropdownesportesComponent } from "../dropdownesportes/dropdownesportes.
 })
 export class HeaderComponent {
   isDropdownVisible = false;
-  isHeaderBlack = false;
+  isArrowActive: { [key: string]: boolean } = {};
   menuIconSrc = '../../../assets/menu-burguer.svg';
   activeSubmenuId: string | null = null;
+  dropdownTop = 50;
+  isBigScreen = false;
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize(): void {
+    this.isBigScreen = window.innerWidth > 1020;
+  }
+
+  ngOnInit(): void {
+    this.checkScreenSize();
+  }
 
   toggleDropdownMenu(): void {
-    this.menuIconSrc = this.isDropdownVisible ? '../../../assets/menu-open.svg' : '../../../assets/menu-burguer.svg';
+    this.menuIconSrc = this.isDropdownVisible ? '../../../assets/menu-burguer.svg' : '../../../assets/menu-open.svg';
     this.isDropdownVisible = !this.isDropdownVisible;
-    //let check = this.isDropdownVisible ? this.toggleDropdownSubmenu : null;
   }
 
   toggleDropdownSubmenu(submenuId: string): void {
-    //this.isDropdownVisible = true;
-    this.activeSubmenuId = submenuId;
-    this.isHeaderBlack = !this.isHeaderBlack;
+    if (this.activeSubmenuId === submenuId) {
+      this.activeSubmenuId = null;
+      this.isArrowActive = {};
+    } else {
+      this.activeSubmenuId = submenuId;
+      this.isArrowActive = { [submenuId]: true };
+    }
 
-    /* switch (this.activeSubmenuId) {
-      case 'jogos':
-        document.documentElement.style.setProperty('--margin-top-dropdown', '70px');
-        break;
-      case 'esportes':
-        document.documentElement.style.setProperty('--margin-top-dropdown', '90px');
-        break;
-    } */
+    if (this.activeSubmenuId === 'jogos') {
+      this.dropdownTop = -250;
+    } else if (this.activeSubmenuId === 'esportes') {
+      this.dropdownTop = -190;
+    }
   }
+
 }

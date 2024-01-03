@@ -8,13 +8,23 @@
 
     <nav class="flex">
       <ul class="nav-primary flex" [ngClass]="{'show': isDropdownVisible}">
-        <li class="dropdown" (click)="toggleDropdownSubmenu('jogos')">Jogos</li>
-        <!-- <app-dropdown-jogos *ngIf="activeSubmenuId === 'jogos'"></app-dropdown-jogos> -->
-        <li class="dropdown" (click)="toggleDropdownSubmenu('esportes')">Esportes</li>
-        <!-- <app-dropdown-esportes *ngIf="activeSubmenuId === 'esportes'"></app-dropdown-esportes> -->
+        <li class="dropdown" (click)="toggleDropdownSubmenu('jogos')" [ngClass]="{'active': isArrowActive['jogos']}">Jogos</li>
+        <li class="dropdown" (click)="toggleDropdownSubmenu('esportes')" [ngClass]="{'active': isArrowActive['esportes']}">Esportes</li>
         <li>Loja</li>
         <li>Notícias</li>
         <li>Suporte</li>
+        <app-dropdown-jogos
+        *ngIf="activeSubmenuId === 'jogos'"
+          [isBigScreen]="isBigScreen"
+          [ngClass]="{'bigscreen': isBigScreen, 'smallscreen': !isBigScreen}"
+          [style.--padding-top.px]="dropdownTop"
+        ></app-dropdown-jogos>
+        <app-dropdown-esportes
+        *ngIf="activeSubmenuId === 'esportes'"
+          [isBigScreen]="isBigScreen"
+          [ngClass]="{'bigscreen': isBigScreen, 'smallscreen': !isBigScreen}"
+          [style.--padding-top.px]="dropdownTop"
+        ></app-dropdown-esportes>
       </ul>
     </nav>
 

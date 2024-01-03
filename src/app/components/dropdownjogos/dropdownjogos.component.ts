@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IconGameMenu } from '../../models/IconGameMenu';
 
 @Component({
@@ -24,4 +24,7 @@ export class DropdownJogosComponent {
     { id: 11, title: 'StarCraft Remastered', logo: 'game-8'},
     { id: 12, title: 'Arcade da Blizzard®', logo: 'game-7'},
   ];
+
+  @Input() isBigScreen: boolean = false;
+
 }

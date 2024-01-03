@@ -27,7 +27,13 @@ header {
   content: url("../../../assets/arrow.svg");
   position: absolute;
   margin-left: 7px;
-  transform: rotate(270deg) scale(0.8);
+  transform: rotate(270deg) scale(0.8) translateX(3px);
+
+}
+
+.dropdown.active::after {
+  filter: invert(30%) sepia(100%) saturate(6001%) hue-rotate(540deg) brightness(602%) contrast(243%);
+  transform: rotate(90deg) scale(0.8) translateX(3px);
 }
 
 button {
@@ -42,10 +48,18 @@ nav {
 .nav-primary {
   list-style-type: none;
   gap: 30px;
+
+  z-index: 33;
 }
 
 li {
+  margin: 0;
   font-size: 16px;
+}
+
+.nav-primary > li {
+  z-index: 33;
+
 }
 
 .nav-secondary {
@@ -94,14 +108,6 @@ li {
 li {
   cursor: pointer;
 }
-
-/* .header.black {
-  background: linear-gradient(
-    25deg,
-    rgb(15, 15, 20) 20%,
-    rgba(14, 17, 23, 1) 55%
-  );
-} */
 
 @media screen and (max-width: 1020px) {
   .nav-primary,
@@ -154,7 +160,7 @@ li {
   }
 
   .nav-primary.show {
-    padding-top: 212px;
+    padding-top: 230px;
   }
 
   .nav-secondary.show {
@@ -163,7 +169,8 @@ li {
     left: 0;
     right: 0;
     transform: translateY(0);
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.596);
     justify-content: center;
   }
 }
