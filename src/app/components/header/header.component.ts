@@ -56,7 +56,7 @@ export class HeaderComponent {
     }
 
     if (this.activeSubmenuId === 'jogos') {
-      this.dropdownTop = -250;
+      this.dropdownTop = -230;
     } else if (this.activeSubmenuId === 'esportes') {
       this.dropdownTop = -190;
     }
