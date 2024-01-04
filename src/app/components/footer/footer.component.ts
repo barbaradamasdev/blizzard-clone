@@ -15,19 +15,23 @@ export class FooterComponent {
     const userAgent = window.navigator.userAgent;
 
     if (userAgent.includes('Windows')) {
-      this.updateOS('para o Windows');
+      this.updateOS('Windows');
     } else if (userAgent.includes('MacOS')) {
-      this.updateOS('para o MacOS');
+      this.updateOS('MacOS');
     } else if (userAgent.includes('Linux')) {
-      this.updateOS('para o Linux');
+      this.updateOS('Linux');
     } else {
       this.updateOS('agora');
     }
   }
 
   updateOS(sistemaOperacional:string): void {
-    this.iconOs = `../../../assets/os/${sistemaOperacional}.svg`;
-    this.title = sistemaOperacional;
+    if (sistemaOperacional === 'agora') {
+      this.title = sistemaOperacional;
+    } else {
+      this.iconOs = `../../../assets/os/${sistemaOperacional}.svg`;
+      this.title = 'para o ' + sistemaOperacional;
+    }
   }
 
 }

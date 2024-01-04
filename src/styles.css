@@ -44,16 +44,24 @@ button {
   border: 2px solid var(--blue-light);
 }
 
+.btn-primary:hover {
+  --blue-light: rgb(28, 61, 209);
+}
+
 .btn-secondary {
   background: transparent;
   border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: black;
 }
 
 a {
   text-decoration: none;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .container {
     padding: 30px;
     width: 100vw;
