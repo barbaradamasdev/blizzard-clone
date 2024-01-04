@@ -15,11 +15,13 @@ export class FooterComponent {
     const userAgent = window.navigator.userAgent;
 
     if (userAgent.includes('Windows')) {
-      this.updateOS('Windows');
+      this.updateOS('para o Windows');
     } else if (userAgent.includes('MacOS')) {
-      this.updateOS('MacOS');
+      this.updateOS('para o MacOS');
     } else if (userAgent.includes('Linux')) {
-      this.updateOS('Linux');
+      this.updateOS('para o Linux');
+    } else {
+      this.updateOS('agora');
     }
   }
 
