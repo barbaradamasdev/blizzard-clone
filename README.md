@@ -1,27 +1,59 @@
-# BlizzardClone
+# Blizzard + Angular v.17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Este projeto tem como objetivo reproduzir um site clone da Blizzard, modelo criado pelo [Gilberto Prado](https://insany.design/) para o [BRChallenges](https://www.brchallenges.com/desafio/blizzard).
 
-## Development server
+![Tela final](https://github.com/barbaradamasdev/blizzard-clone/blob/main/blizzard-clone.jpg?raw=true)
+[Live View do Projeto](https://blizzard-clone.vercel.app/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 🎯 Principais tecnologias utilizadas
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![Angular Badge](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
-## Code scaffolding
+### 🎯  Funcionalidades:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Seções:**
+   - Menu
+   - Banner Hero
+   - Jogos Exclusivos
+   - Footer
 
-## Build
+2. **Personalização:**
+   - Texto e ícone do botão "Baixar jogo" alterados conforme o sistema operacional do usuário.
+   - Efeito de hover nas opções do menu de navegação.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Responsividade para as seguintes resoluções:**
+   - 1920px
+   - 1440px
+   - 768px
+   - 375px
 
-## Running unit tests
+4. **Interatividade:**
+   - Efeito de hover nas imagens dos jogos da seção Jogos Exclusivos.
+   - Alteração dinâmica das informações da seção Banner Hero ao selecionar uma opção no menu lateral. Jogos disponíveis: Diablo, HearthStone e World of Warcraft.
+   - Exibição do modal de login ao clicar no botão "Logar" do menu de navegação.
+   - Criação de componente de dropdown para as opções Jogos e Esportes do menu de navegação.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. **Multimídia:**
+   - Execução de um gif do jogo ao ocorrer o evento de hover ou clique na capa do trailer.
 
-## Running end-to-end tests
+**Material de Apoio:**
+- Componentes no Figma.
+- Componentes específicos para modal de login.
+- Gifs dos jogos para o efeito de hover ou clique na capa do trailer.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 📌 Tecnologias auxiliares
 
-## Further help
+| Tecnologia | Uso | Site |
+| ------ | ------ | ------ |
+| VSCode | Edição de código |code.visualstudio.com/
+| Vercel | Deploy | https://vercel.com/
+| Figma | Protótipo | https://www.figma.com/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### 🚀 Deploy
+O projeto está disponível para visualização [aqui](https://blizzard-clone.vercel.app/)
+
+### 🐼 Autora
+Bárbara Damasceno
+barbaradamas.dev@gmail.com
+[Linkedin](https://www.linkedin.com/in/barbaradamascenodev)
+[Portfolio](https://barbaradamasdev.github.io/portfolio/)
