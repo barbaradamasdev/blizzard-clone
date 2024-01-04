@@ -1,5 +1,6 @@
 footer {
-  background: url("../../../assets/footer-background.png") no-repeat center center / cover;
+  background: url("../../../assets/footer-background.png") no-repeat center
+    center / cover;
 }
 
 .container {
@@ -58,7 +59,7 @@ button svg {
   margin: auto;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   h2 {
     width: 200px;
   }
@@ -68,28 +69,58 @@ button svg {
   }
 
   .app-section {
-    margin-left: -220px;
+    margin-left: -110px;
     margin-right: 0;
-    transform: scale(.8);
+    transform: scale(0.8);
+  }
+
+  .app {
+    height: 100%;
+    width: 585px;
+    object-fit: cover;
+    object-position: 20% 10%;
   }
 
   .app-mini {
-    right: -170px;
+    height: 60%;
+    width: 585px;
+    object-fit: cover;
+    object-position: -54% 10%;
+    right: 0;
+    bottom: 0;
   }
 }
 
-@media screen and (max-width:440px) {
+@media screen and (max-width: 440px) {
   .container {
     flex-direction: column;
   }
 
   .app-section {
     margin-top: -230px;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 
   .app-mini {
     right: 0;
     left: 320px;
   }
+
+  .app {
+    height: 171%;
+    width: 729px;
+    object-fit: cover;
+    margin-top: 71px;
+    object-position: 20% 10%;
+}
+
+  .app-mini {
+    height: 87%;
+    width: 623px;
+    object-fit: cover;
+    object-position: -5% 100%;
+    right: 0;
+    left: 104px;
+    bottom: -410px;
+}
 }

@@ -94,11 +94,9 @@ section {
 
   .container {
     padding: 0 30px 30px;
-  }
-
-  footer {
     overflow: hidden;
   }
+
 }
 
 @media screen and (max-width: 1020px) {
