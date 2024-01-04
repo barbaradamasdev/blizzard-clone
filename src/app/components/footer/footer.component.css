@@ -89,12 +89,18 @@ button svg {
     right: 0;
     bottom: 0;
   }
+
+  footer {
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 440px) {
   .container {
     flex-direction: column;
+    overflow: hidden;
   }
+
 
   .app-section {
     margin-top: -230px;
@@ -112,7 +118,7 @@ button svg {
     object-fit: cover;
     margin-top: 71px;
     object-position: 20% 10%;
-}
+  }
 
   .app-mini {
     height: 87%;
@@ -122,5 +128,5 @@ button svg {
     right: 0;
     left: 104px;
     bottom: -410px;
-}
+  }
 }
